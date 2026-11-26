@@ -1,0 +1,27 @@
+<div class="screen">
+  <div class="calendar">
+    <text class="arrow" onclick="previousDay">‹</text>
+    <text class="date">{{date}}</text>
+    <text class="arrow" onclick="nextDay">›</text>
+  </div>
+  <stack class="viewport" onswipe="swipeLesson">
+    <div for="{{cards}}" class="page" style="animation-name: {{$item.motion}};">
+      <div class="card" style="opacity: {{cardOpacity}};">
+        <text class="title">{{$item.title}}</text>
+        <text class="title" if="{{$item.hasTitleTail}}">{{$item.titleTail}}</text>
+        <div class="location" if="{{$item.hasLesson}}">
+          <text class="room">{{$item.room}}</text>
+          <text class="campus">示例校区</text>
+        </div>
+        <div class="metadata" if="{{$item.hasLesson}}">
+          <text class="time">{{$item.time}}</text>
+          <div class="marker" style="background-color: {{$item.color}};"></div>
+          <text class="sections">{{$item.sections}}</text>
+        </div>
+      </div>
+    </div>
+  </stack>
+  <div class="pagination">
+    <text class="swipe-hint" if="{{canSwitch}}">{{courseHint}}</text>
+  </div>
+</div>

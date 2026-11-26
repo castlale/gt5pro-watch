@@ -1,0 +1,115 @@
+.screen {
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.calendar {
+  width: 67%;
+  height: 50px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.arrow {
+  width: 46px;
+  height: 46px;
+  border-radius: 23px;
+  background-color: #252528;
+  color: #f5f5f7;
+  font-size: 34px;
+  text-align: center;
+}
+.date {
+  color: #ffffff;
+  font-size: 23px;
+  text-align: center;
+}
+.viewport {
+  width: 100%;
+  height: 174px;
+}
+.page {
+  width: 100%;
+  height: 174px;
+  align-items: center;
+  justify-content: center;
+  animation-duration: 280ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes EnterLeft {
+  from { transform: translateX(-466px); }
+  to { transform: translateX(0px); }
+}
+@keyframes EnterRight {
+  from { transform: translateX(466px); }
+  to { transform: translateX(0px); }
+}
+@keyframes ExitLeft {
+  from { transform: translateX(0px); }
+  to { transform: translateX(-466px); }
+}
+@keyframes ExitRight {
+  from { transform: translateX(0px); }
+  to { transform: translateX(466px); }
+}
+.card {
+  width: 86%;
+  height: 174px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: 28px;
+  background-color: #1c1c1e;
+  flex-direction: column;
+  justify-content: center;
+}
+.metadata, .location {
+  width: 100%;
+  height: 35px;
+  align-items: center;
+}
+.location {
+  margin-top: 5px;
+}
+.marker {
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  margin-left: 12px;
+  margin-right: 8px;
+}
+.time {
+  color: #c7c7cc;
+  font-size: 21px;
+}
+.sections, .campus {
+  color: #afafb4;
+  font-size: 19px;
+}
+.campus {
+  margin-left: 12px;
+}
+.title {
+  font-size: 30px;
+  letter-spacing: 0px;
+  color: #ffffff;
+}
+.room {
+  font-size: 24px;
+  color: #e5e5ea;
+}
+.pagination {
+  width: 65%;
+  height: 54px;
+  align-items: center;
+  justify-content: center;
+}
+.swipe-hint {
+  width: 100%;
+  text-align: center;
+  color: #afafb4;
+  font-size: 19px;
+}
